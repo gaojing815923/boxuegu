@@ -1,23 +1,19 @@
 require('../common/header.js');
 require('../common/aside.js');
+var util = require('../common/util.js');
 
 
-$.ajax({
-    url: '/v6/category/modify',
-    type: 'post',
-    success: function(data) {
-        if (data.code == 200) {
-            $('#category-edit').html(template('category-edit-tpl', data.result));
-        }
-    }
+var cg_id = util.getSearch('cg_id');
+$.get('/v6/category/edit', { cg_id: cg_id }, function(data) {
+    $('.category-edit').html(template('category-edit-tpl', data.result));
+
 })
 
 $('#category-edit-form').ajaxForm({
     delegation: true,
-    function(data) {
+    success: function(data) {
         if (data.code == 200) {
-            alert("分类修改成功了！");
-
+            alert("课程修改成功了！");
         }
     }
 })

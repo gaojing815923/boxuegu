@@ -122,8 +122,9 @@
                 <td>{{teacher.tc_cellphone}}</td>
                 <td>
                     <a href="#teacherModal" data-tc-id="{{teacher.tc_id}}" data-toggle="modal" data-target="#teacherModal" class="btn btn-info btn-xs">查 看</a>
-                    <a href="/dist/html/teacher/edit.html?tc_id={{teacher.tc_id}}" class="btn btn-info btn-xs">编 辑</a>
-                    <a href="javascript:;" class="btn btn-warning btn-xs">注销 </a>
+                    <!--<a href="/dist/html/teacher/edit.html?tc_id={{teacher.tc_id}}" class="btn btn-info btn-xs">编 辑</a>-->
+                    <a href="/dist/html/teacher/profile.html?tc_id={{teacher.tc_id}}" class="btn btn-info btn-xs">编 辑</a>
+                    <a href="javascript:;" class="btn btn-warning btn-xs" id='teacher-status' data-tc-id="{{teacher.tc_id}}" data-tc-status="{{teacher.tc_status}}">{{tc_status==0?'注销':'启用'}} </a>
                 </td>
             </tr>
         </tbody>

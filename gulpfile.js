@@ -76,6 +76,7 @@ jsModules = [
     'src/js/teacher/add.js',
     'src/js/teacher/edit.js',
     'src/js/teacher/list.js',
+    'src/js/teacher/profile.js',
     //用户
     'src/js/user/login.js',
     'src/js/user/profile.js',

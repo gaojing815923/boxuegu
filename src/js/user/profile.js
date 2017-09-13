@@ -21,3 +21,5 @@ $('#teacher-profile-form').ajaxForm({
         }
     }
 });
+
+//上传头像

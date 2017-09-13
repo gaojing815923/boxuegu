@@ -1,6 +1,5 @@
 require('../common/header.js');
 require('../common/aside.js');
-var util = require('../common/util.js');
 
 // $.ajax({
 //     url: '/v6/category',
